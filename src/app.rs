@@ -11,7 +11,7 @@ pub fn App() -> Html {
         let audio_ref = audio_ref.clone();
         let started = started.clone();
 
-        Callback::from(move |a| {
+        Callback::from(move |_| {
             if *started {
                 return;
             }

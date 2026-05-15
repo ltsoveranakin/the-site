@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--    <base href="/the-site/"/>-->
+    <title>Welcome</title>
+    
+    <meta charset="utf-8"/>
+    <title>Trunk Template</title>
+    <link rel="stylesheet" href="/index-dc701a4bb7506bad.css" integrity="sha384-0TpSQlvi0TY05jLdsignkV5S9irA0kaAwFWqIS7p3lf/3Z8Jw7oAR8AgdShKl7YA"/>
+    <link rel="icon" href="/favicon-b157513949d8792b.ico" integrity="sha384-3jIayFZy7XM9jLsZ+w7rDEtENPYdG51TXBsabTdkcvXmYlI2q+V5ZRbOA8KzPQJF"/>
+<link rel="modulepreload" href="/the-site-35f901c419230fb5.js" crossorigin="anonymous" integrity="sha384-iMTQHcVRiTTwggZQ4V6qrjrFFJHDAu9RbtYmK4PCgAsEEYoQ4lC+t4gdV6mvyjPl"><link rel="preload" href="/the-site-35f901c419230fb5_bg.wasm" crossorigin="anonymous" integrity="sha384-wmH+W1v5HSbnI6HuytaxZITQx+tF1ScSutK53rDMPELmXULet+iZ+cFmiDWlTIl7" as="fetch" type="application/wasm"></head>
+<body>
+<script type="module">
+import init, * as bindings from '/the-site-35f901c419230fb5.js';
+const wasm = await init({ module_or_path: '/the-site-35f901c419230fb5_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
