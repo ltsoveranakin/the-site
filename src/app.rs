@@ -1,4 +1,3 @@
-use crate::item::ItemComp;
 use web_sys::js_sys::Math::random;
 use web_sys::HtmlAudioElement;
 use yew::prelude::*;
@@ -32,8 +31,6 @@ pub fn App() -> Html {
             <h1>{":3 Welcome 2 My website!!!!! :3"}</h1>
             <img src="assets/img/roach.gif"/>
             <img src="assets/img/roach.gif"/>
-            <br/>
-            <ItemComp is_v={is_vid}></ItemComp>
             <h6>{ "Graphics design is my passion" }</h6>
             <img src="assets/img/muney.gif"/>
             <img src="assets/img/muney.gif"/>
