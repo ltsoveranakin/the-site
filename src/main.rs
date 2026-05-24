@@ -1,5 +1,7 @@
+mod about_me;
 mod app;
-pub mod item;
+mod banner;
+mod projects;
 
 use app::App;
 use tracing_subscriber::{filter::Targets, prelude::*};
