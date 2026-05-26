@@ -7,6 +7,7 @@ pub(super) struct AboutMeProps {}
 pub(super) fn AboutMe(props: &AboutMeProps) -> Html {
     html! {
         <div>
+        {"<About me>"}
         </div>
     }
 }

@@ -1,12 +1,15 @@
+use crate::components::text::{Description, Header};
+use crate::projects::technologies::Technolgies;
 use web_sys::MouseEvent;
 use yew::{component, html, Callback, Html, Properties};
 
 #[derive(Properties, PartialEq)]
 pub(super) struct ItemProps {
-    pub(crate) cover_img: &'static str,
-    pub(crate) name: &'static str,
-    pub(crate) description: &'static str,
-    pub(crate) url: &'static str,
+    pub(super) cover_img: &'static str,
+    pub(super) name: &'static str,
+    pub(super) description: &'static str,
+    pub(super) url: &'static str,
+    pub(super) tech_used: Technolgies,
     pub(super) on_hover: Callback<MouseEvent>,
 }
 
@@ -17,9 +20,21 @@ pub(super) fn DisplayItem(props: &ItemProps) -> Html {
             <div class={"display-item"}>
                 <img src={props.cover_img} class={"display-item-img"}/>
 
-                <div class={"display-item-title"}>{props.name}</div>
+                <div class={"display-item-title-container"}>
 
-                <div class={"display-item-description"}>{props.description}</div>
+                    {
+                        props.tech_used.get_img_src().iter().map(|img_src| {
+                            html! {
+                                <img class={"display-item-title-language-icon"} src={format!("assets/img/{}", img_src)}/>
+                            }
+                        }).collect::<Html>()
+                    }
+
+
+                    <Header txt={props.name}/>
+                </div>
+
+                <Description txt={props.description}/>
             </div>
         </a>
     }
