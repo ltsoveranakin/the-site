@@ -1,8 +1,8 @@
 mod about_me;
 mod app;
-mod banner;
 mod components;
-mod disclaimer;
+mod footer;
+mod header;
 mod projects;
 
 use app::App;

@@ -15,7 +15,7 @@ pub(crate) fn Title(props: &TextProps) -> Html {
 }
 
 #[component]
-pub(crate) fn Header(props: &TextProps) -> Html {
+pub(crate) fn Heading(props: &TextProps) -> Html {
     html! {
         <div class={"text-heading"}>
             {props.txt}

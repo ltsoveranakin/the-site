@@ -1,7 +1,7 @@
 mod item;
 mod technologies;
 
-use crate::components::text::{Description, Header};
+use crate::components::text::{Description, Heading};
 use crate::projects::item::DisplayItem;
 use crate::projects::technologies::Technolgies;
 use std::rc::Rc;
@@ -58,8 +58,8 @@ fn Projects(props: &ProjectsProps) -> Html {
         .unwrap_or_default();
 
     html! {
-        <div class={"projects"} style={projects_div_style}>
-            <Header txt={"Projects"}/>
+        <div class={"projects border-t"} style={projects_div_style}>
+            <Heading txt={"Projects"}/>
             <Description txt={"These are some of the various personal projects I've worked on"}/>
 
             <div class={"projects-container"}>

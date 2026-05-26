@@ -1,4 +1,4 @@
-use crate::components::text::{Description, Header};
+use crate::components::text::{Description, Heading};
 use crate::projects::technologies::Technolgies;
 use web_sys::MouseEvent;
 use yew::{component, html, Callback, Html, Properties};
@@ -17,7 +17,7 @@ pub(super) struct ItemProps {
 pub(super) fn DisplayItem(props: &ItemProps) -> Html {
     html! {
         <a href={props.url} onmouseover={props.on_hover.clone()}>
-            <div class={"display-item"}>
+            <div class={"display-item border"}>
                 <img src={props.cover_img} class={"display-item-img"}/>
 
                 <div class={"display-item-title-container"}>
@@ -31,7 +31,7 @@ pub(super) fn DisplayItem(props: &ItemProps) -> Html {
                     }
 
 
-                    <Header txt={props.name}/>
+                    <Heading txt={props.name}/>
                 </div>
 
                 <Description txt={props.description}/>

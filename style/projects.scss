@@ -1,5 +1,7 @@
-.projects {
+@use "colors" as *;
 
+.projects {
+	background-color: $projects-bg-color;
 }
 
 .projects-container {
@@ -16,12 +18,12 @@
 
 .display-item {
 	height: fit-content;
-	background: #363f45;
+	background-color: $item-bg-color;
 	border-radius: 10px;
 	width: 320px;
 	padding: 10px 0;
 	transition: all 0.5s ease;
-	color: #ffffff;
+	color: $text-color;
 	margin: 20px;
 }
 

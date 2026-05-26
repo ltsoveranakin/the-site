@@ -1,6 +1,7 @@
 use crate::about_me::AboutMe;
-use crate::banner::Banner;
-use crate::disclaimer::Disclaimer;
+
+use crate::footer::Footer;
+use crate::header::Header;
 use crate::projects::ProjectsWhole;
 use yew::prelude::*;
 
@@ -8,10 +9,10 @@ use yew::prelude::*;
 pub(super) fn App() -> Html {
     html! {
         <main>
-            <Banner/>
+            <Header/>
             <AboutMe/>
             <ProjectsWhole/>
-            <Disclaimer/>
+            <Footer/>
         </main>
     }
 }

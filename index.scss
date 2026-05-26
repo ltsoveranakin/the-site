@@ -1,6 +1,5 @@
 @use "style/index";
-
-$bg-color: #011427;
+@use "style/colors" as *;
 
 html,
 body {
@@ -12,10 +11,10 @@ body {
 	text-align: center;
 	align-items: center;
 	display: flex;
-	background: $bg-color;
+	background: $body-bg-color;
 	width: 100%;
 	height: 100%;
-	color: #ffffff;
+	color: $text-color;
 	font-family: sans-serif;
 }
 
@@ -30,4 +29,19 @@ a {
 
 .banner {
 	width: 100%;
+}
+
+$border-style: 5px solid $border-color;
+
+.border {
+	border: $border-style;
+	border-radius: 10px;
+}
+
+.border-t {
+	border-top: $border-style;
+}
+
+.border-b {
+	border-bottom: $border-style;
 }
