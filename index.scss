@@ -1,6 +1,15 @@
 @use "style/index";
 @use "style/colors" as *;
 
+@font-face {
+	font-family: Brico;
+	src: url("assets/font/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf");
+}
+
+* {
+	font-family: Brico;
+}
+
 html,
 body {
 	height: 100%;
@@ -27,9 +36,6 @@ a {
 	text-decoration: none;
 }
 
-.banner {
-	width: 100%;
-}
 
 $border-style: 5px solid $border-color;
 

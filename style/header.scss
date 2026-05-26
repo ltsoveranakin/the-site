@@ -1,0 +1,11 @@
+.header {
+	width: 100%;
+	display: inline-flex;
+	justify-content: center;
+}
+
+.header-end {
+	right: 0;
+	position: absolute;
+	width: fit-content;
+}

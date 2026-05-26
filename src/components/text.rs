@@ -3,6 +3,7 @@ use yew::{component, html, Html, Properties};
 #[derive(PartialEq, Properties)]
 pub(crate) struct TextProps {
     pub(crate) txt: &'static str,
+    // #[prop_or_default]
 }
 
 #[component]
@@ -27,6 +28,15 @@ pub(crate) fn Heading(props: &TextProps) -> Html {
 pub(crate) fn Description(props: &TextProps) -> Html {
     html! {
         <div class={"text-normal"}>
+            {props.txt}
+        </div>
+    }
+}
+
+#[component]
+pub(crate) fn SmallText(props: &TextProps) -> Html {
+    html! {
+        <div class={"text-small"}>
             {props.txt}
         </div>
     }

@@ -32,12 +32,13 @@ pub(super) fn ProjectsWhole() -> Html {
                 description: "My very own website, written in rust using yew-rs!",
                 url: "https://github.com/ltsoveranakin/the-site",
                 tech_used: Technolgies::RUST | Technolgies::YEW,
-                ..Default::default()
+                cover_img: "assets/img/siteception.png",
             },
             Project {
                 name: "SerBytes",
                 description: "A fast and simple serialization library",
                 tech_used: Technolgies::RUST,
+                url: "https://github.com/ltsoveranakin/serbytes",
                 ..Default::default()
             }
         ])}/>
@@ -59,8 +60,10 @@ fn Projects(props: &ProjectsProps) -> Html {
 
     html! {
         <div class={"projects border-t"} style={projects_div_style}>
-            <Heading txt={"Projects"}/>
-            <Description txt={"These are some of the various personal projects I've worked on"}/>
+            <div class={"projects-header border-b"}>
+                <Heading txt={"Projects"}/>
+                <Description txt={"These are some of the various personal projects I've worked on"}/>
+            </div>
 
             <div class={"projects-container"}>
                 {
