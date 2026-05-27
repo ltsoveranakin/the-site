@@ -13,8 +13,10 @@ pub(super) fn AboutMe() -> Html {
 
             <div class="about-paragraph">
                 <Paragraph txt="\
-                Even from a young age, I've always been interested in science and the inner workings of things. \
-                Shows like mythbusters inspired me to
+                From a young age, I've always been interested in science and the inner workings of things. \
+                I'd enjoy taking technology apart to better understand how it works. I this greatly translated into the programming languages I would go off to learn. \
+                Languages like Rust and Java were always special to me due to the nature of the entire language being written in itself.
+                You'll probably find me writing a random library/personal toolset or one of my many other projects
                 I'm currently studying for my masters in computer science with a concentration in software engineering.\
                 "/>
             </div>

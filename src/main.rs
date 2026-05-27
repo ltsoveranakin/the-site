@@ -1,9 +1,9 @@
 mod about_me;
 mod app;
 mod components;
-mod footer;
-mod header;
+mod hf;
 mod projects;
+mod skills;
 
 use app::App;
 use tracing_subscriber::{filter::Targets, prelude::*};

@@ -10,9 +10,8 @@
 
 .header {
 	@include shared.hf;
-	@include border.border-rl;
 	@include border.border-b;
-	background-color: $header-col;
+	position: relative;
 	border-radius: 0 0 border.$border-radius-style border.$border-radius-style;
 }
 
@@ -23,6 +22,7 @@
 }
 
 .header-end {
+	//margin-left: auto;
 	right: 0;
 	position: absolute;
 	width: fit-content;

@@ -1,7 +1,8 @@
 use crate::about_me::AboutMe;
+use crate::skills::Skills;
 
-use crate::footer::Footer;
-use crate::header::Header;
+use crate::hf::footer::Footer;
+use crate::hf::header::Header;
 use crate::projects::ProjectsWhole;
 use yew::prelude::*;
 
@@ -14,6 +15,7 @@ pub(super) fn App() -> Html {
             <Header/>
             <AboutMe/>
             <ProjectsWhole/>
+            <Skills/>
             <Footer/>
         </main>
     }

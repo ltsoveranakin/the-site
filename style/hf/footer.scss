@@ -1,8 +1,10 @@
+@use "shared";
+@use "../border";
 @use "../colors" as *;
 
 .footer {
-	width: 100%;
-	background-color: $footer-color;
+	@include shared.hf;
+	border-radius: border.$border-radius-style border.$border-radius-style 0 0;
 }
 
 .findme {

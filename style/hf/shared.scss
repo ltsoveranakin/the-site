@@ -1,3 +1,8 @@
+@use "../border";
+@use "../colors";
+
 @mixin hf {
+	@include border.border-rl;
 	width: 80%;
+	background-color: colors.$hf-col;
 }

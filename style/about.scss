@@ -1,7 +1,10 @@
 @use "colors" as *;
 
 .about {
+	$ab-margin: 75px;
 	background-color: $base-col;
+	margin-top: $ab-margin;
+	margin-bottom: $ab-margin;
 }
 
 .about-heading {
