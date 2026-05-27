@@ -1,0 +1,64 @@
+@use "border";
+@use "colors" as *;
+
+.projects {
+	background-color: $projects-bg-color;
+}
+
+.projects-header {
+	background-color: $projects-header-bg-color;
+}
+
+.projects-container {
+	display: inline-flex;
+}
+
+.display-item-title-container {
+	display: inline-flex;
+}
+
+//.display-item-title-language-icon {
+//	width: 15px;
+//}
+
+.display-item {
+	@include border.border;
+	height: fit-content;
+	background-color: $item-bg-color;
+	border-radius: 10px;
+	width: 320px;
+	padding: 10px 0;
+	transition: all 0.5s ease;
+	color: $text-color;
+	margin: 20px;
+}
+
+.display-item-title {
+	font-size: 2rem;
+}
+
+.display-item:hover {
+	transform: scale(1.05);
+	filter: none;
+}
+
+.display-item .display-item-img {
+	filter: grayscale(100%);
+}
+
+.display-item:hover .display-item-img {
+	filter: none;
+}
+
+.display-item-img {
+	width: 300px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.display-item-description {
+	text-wrap: wrap;
+	margin: 0;
+	font-size: 1rem;
+}

@@ -1,0 +1,194 @@
+.border-t {
+  border-top: 5px solid #7b7f83;
+}
+
+.projects {
+  background-color: #2e2e37;
+}
+
+.projects-header {
+  background-color: #252529;
+}
+
+.projects-container {
+  display: inline-flex;
+}
+
+.display-item-title-container {
+  display: inline-flex;
+}
+
+.display-item {
+  border: 5px solid #7b7f83;
+  border-radius: 10px;
+  height: fit-content;
+  background-color: #363f45;
+  border-radius: 10px;
+  width: 320px;
+  padding: 10px 0;
+  transition: all 0.5s ease;
+  color: #bac5cf;
+  margin: 20px;
+}
+
+.display-item-title {
+  font-size: 2rem;
+}
+
+.display-item:hover {
+  transform: scale(1.05);
+  filter: none;
+}
+
+.display-item .display-item-img {
+  filter: grayscale(100%);
+}
+
+.display-item:hover .display-item-img {
+  filter: none;
+}
+
+.display-item-img {
+  width: 300px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.display-item-description {
+  text-wrap: wrap;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.text-title {
+  font-size: 3rem;
+}
+
+.text-heading {
+  font-size: 2rem;
+}
+
+.text-heading2 {
+  font-size: 1.75rem;
+}
+
+.text-normal, .text-paragraph {
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.text-small {
+  font-size: 0.7rem;
+}
+
+.header-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.header {
+  border-left: 5px solid #7b7f83;
+  border-right: 5px solid #7b7f83;
+  width: 80%;
+  background-color: #252529;
+  border-bottom: 5px solid #7b7f83;
+  position: relative;
+  border-radius: 0 0 10px 10px;
+}
+
+.header-top {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.header-end {
+  right: 0;
+  position: absolute;
+  width: fit-content;
+}
+
+.footer {
+  border-left: 5px solid #7b7f83;
+  border-right: 5px solid #7b7f83;
+  width: 80%;
+  background-color: #252529;
+  border-radius: 10px 10px 0 0;
+}
+
+.findme {
+  display: inline-flex;
+  height: fit-content;
+}
+
+.findme-paragraph {
+  align-self: center;
+}
+
+.about {
+  background-color: #1e314c;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.about-heading {
+  width: 33%;
+}
+
+.about-heading-content {
+  flex: 1;
+}
+
+.about-paragraph {
+  width: 35%;
+}
+
+.skills-content {
+  display: inline-flex;
+}
+
+.skill {
+  border: 5px solid #7b7f83;
+  border-radius: 10px;
+  background-color: #252529;
+  margin: 40px;
+  padding: 15px;
+}
+
+@font-face {
+  font-family: Brico;
+  src: url("assets/font/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf");
+}
+* {
+  font-family: Brico;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  background: #1e314c;
+  width: 100%;
+  height: 100%;
+  color: #bac5cf;
+  font-family: sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../style/border.scss%22,%22../../style/projects.scss%22,%22../../style/colors.scss%22,%22../../style/text.scss%22,%22../../style/hf/header.scss%22,%22../../style/hf/shared.scss%22,%22../../style/hf/footer.scss%22,%22../../style/about.scss%22,%22../../style/skills.scss%22,%22../../index.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAUA;EACC,YATc;;;ACCf;EACC,kBCFc;;;ADKf;EACC,kBCPe;;;ADUhB;EACC;;;AAGD;EACC;;;AAOD;EDjBC,QAJc;EAKd,eAJqB;ECsBrB;EACA,kBCvBiB;EDwBjB;EACA;EACA;EACA;EACA,OCzBY;ED0BZ;;;AAGD;EACC;;;AAGD;EACC;EACA;;;AAGD;EACC;;;AAGD;EACC;;;AAGD;EACC;EACA;EACA;EACA;;;AAGD;EACC;EACA;EACA;;;AE9DD;EACC;;;AAGD;EACC;;;AAGD;EACC;;;AAGD;EACC;EACA;;;AAGD;EACC;;;ACdD;EACC;EACA;EACA;;;AAGD;EJSC,aAjBc;EAkBd,cAlBc;EKGd;EACA,kBHLe;EFcf,eAbc;EIWd;EACA;;;AAGD;EACC;EACA;EACA;;;AAGD;EAEC;EACA;EACA;;;AEvBD;ENeC,aAjBc;EAkBd,cAlBc;EKGd;EACA,kBHLe;EIKf;;;AAGD;EACC;EACA;;;AAGD;EACC;;;ACbD;EAEC,kBLJU;EKKV,YAFY;EAGZ,eAHY;;;AAMb;EACC;;;AAGD;EACC;;;AAGD;EACC;;;ACfD;EACC;;;AAGD;ERDC,QAJc;EAKd,eAJqB;EQMrB,kBNRe;EMSf;EACA;;;ACRD;EACC;EACA;;AAGD;EACC;;;AAGD;AAAA;EAEC;EACA;;;AAGD;EACC;EACA;EACA;EACA,YPtBU;EOuBV;EACA;EACA,OPnBY;EOoBZ;;;AAGD;EACC;EACA;;;AAGD;EACC%22,%22file%22:%22index.css%22%7D */
