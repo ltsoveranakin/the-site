@@ -1,3 +1,7 @@
+.border-t {
+  border-top: 5px solid #7b7f83;
+}
+
 .projects {
   background-color: #2e2e37;
 }
@@ -15,6 +19,8 @@
 }
 
 .display-item {
+  border: 5px solid #7b7f83;
+  border-radius: 10px;
   height: fit-content;
   background-color: #363f45;
   border-radius: 10px;
@@ -63,6 +69,10 @@
   font-size: 2rem;
 }
 
+.text-heading2 {
+  font-size: 1.75rem;
+}
+
 .text-normal, .text-paragraph {
   font-size: 1rem;
   padding: 5px;
@@ -70,15 +80,6 @@
 
 .text-small {
   font-size: 0.7rem;
-}
-
-.border {
-  border: 5px solid #7b7f83;
-  border-radius: 10px;
-}
-
-.border-t {
-  border-top: 5px solid #7b7f83;
 }
 
 .header-container {
@@ -144,6 +145,18 @@
   width: 35%;
 }
 
+.skills-content {
+  display: inline-flex;
+}
+
+.skill {
+  border: 5px solid #7b7f83;
+  border-radius: 10px;
+  background-color: #252529;
+  margin: 40px;
+  padding: 15px;
+}
+
 @font-face {
   font-family: Brico;
   src: url("assets/font/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf");
@@ -178,4 +191,4 @@ a {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../style/projects.scss%22,%22../../style/colors.scss%22,%22../../style/text.scss%22,%22../../style/border.scss%22,%22../../style/hf/header.scss%22,%22../../style/hf/shared.scss%22,%22../../style/hf/footer.scss%22,%22../../style/about.scss%22,%22../../index.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACC,kBCDc;;;ADIf;EACC,kBCNe;;;ADShB;EACC;;;AAGD;EACC;;;AAOD;EACC;EACA,kBCrBiB;EDsBjB;EACA;EACA;EACA;EACA,OCvBY;EDwBZ;;;AAGD;EACC;;;AAGD;EACC;EACA;;;AAGD;EACC;;;AAGD;EACC;;;AAGD;EACC;EACA;EACA;EACA;;;AAGD;EACC;EACA;EACA;;;AE5DD;EACC;;;AAGD;EACC;;;AAGD;EACC;EACA;;;AAGD;EACC;;;ACTD;EACC,QAJc;EAKd,eAJqB;;;AAOtB;EACC,YATc;;;ACEf;EACC;EACA;EACA;;;AAGD;EDSC,aAjBc;EAkBd,cAlBc;EEGd;EACA,kBJLe;EEcf,eAbc;ECWd;EACA;;;AAGD;EACC;EACA;EACA;;;AAGD;EAEC;EACA;EACA;;;AEvBD;EHeC,aAjBc;EAkBd,cAlBc;EEGd;EACA,kBJLe;EKKf;;;AAGD;EACC;EACA;;;AAGD;EACC;;;ACbD;EAEC,kBNJU;EMKV,YAFY;EAGZ,eAHY;;;AAMb;EACC;;;AAGD;EACC;;;AAGD;EACC;;;ACfD;EACC;EACA;;AAGD;EACC;;;AAGD;AAAA;EAEC;EACA;;;AAGD;EACC;EACA;EACA;EACA,YPtBU;EOuBV;EACA;EACA,OPnBY;EOoBZ;;;AAGD;EACC;EACA;;;AAGD;EACC%22,%22file%22:%22index.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../style/border.scss%22,%22../../style/projects.scss%22,%22../../style/colors.scss%22,%22../../style/text.scss%22,%22../../style/hf/header.scss%22,%22../../style/hf/shared.scss%22,%22../../style/hf/footer.scss%22,%22../../style/about.scss%22,%22../../style/skills.scss%22,%22../../index.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAUA;EACC,YATc;;;ACCf;EACC,kBCFc;;;ADKf;EACC,kBCPe;;;ADUhB;EACC;;;AAGD;EACC;;;AAOD;EDjBC,QAJc;EAKd,eAJqB;ECsBrB;EACA,kBCvBiB;EDwBjB;EACA;EACA;EACA;EACA,OCzBY;ED0BZ;;;AAGD;EACC;;;AAGD;EACC;EACA;;;AAGD;EACC;;;AAGD;EACC;;;AAGD;EACC;EACA;EACA;EACA;;;AAGD;EACC;EACA;EACA;;;AE9DD;EACC;;;AAGD;EACC;;;AAGD;EACC;;;AAGD;EACC;EACA;;;AAGD;EACC;;;ACdD;EACC;EACA;EACA;;;AAGD;EJSC,aAjBc;EAkBd,cAlBc;EKGd;EACA,kBHLe;EFcf,eAbc;EIWd;EACA;;;AAGD;EACC;EACA;EACA;;;AAGD;EAEC;EACA;EACA;;;AEvBD;ENeC,aAjBc;EAkBd,cAlBc;EKGd;EACA,kBHLe;EIKf;;;AAGD;EACC;EACA;;;AAGD;EACC;;;ACbD;EAEC,kBLJU;EKKV,YAFY;EAGZ,eAHY;;;AAMb;EACC;;;AAGD;EACC;;;AAGD;EACC;;;ACfD;EACC;;;AAGD;ERDC,QAJc;EAKd,eAJqB;EQMrB,kBNRe;EMSf;EACA;;;ACRD;EACC;EACA;;AAGD;EACC;;;AAGD;AAAA;EAEC;EACA;;;AAGD;EACC;EACA;EACA;EACA,YPtBU;EOuBV;EACA;EACA,OPnBY;EOoBZ;;;AAGD;EACC;EACA;;;AAGD;EACC%22,%22file%22:%22index.css%22%7D */

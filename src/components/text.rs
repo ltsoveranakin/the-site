@@ -22,6 +22,13 @@ pub(crate) fn Heading(props: &TextProps) -> Html {
 }
 
 #[component]
+pub(crate) fn Heading2(props: &TextProps) -> Html {
+    html! {
+        <BasicText text_props={*props} class="text-heading2"/>
+    }
+}
+
+#[component]
 pub(crate) fn Description(props: &TextProps) -> Html {
     html! {
         <BasicText text_props={*props} class="text-normal"/>

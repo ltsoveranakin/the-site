@@ -21,7 +21,7 @@ pub(super) fn DisplayItem(props: &ItemProps) -> Html {
 
     html! {
         <a href={props.url} onmouseover={props.on_hover.clone()}>
-            <div class="display-item border">
+            <div class="display-item">
                 <img src={props.cover_img} class="display-item-img"/>
 
                 <div class="display-item-title-container">

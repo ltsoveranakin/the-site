@@ -1,9 +1,9 @@
-@use "colors";
+@use "colors" as *;
 
-$border-style: 5px solid colors.$border-color;
+$border-style: 5px solid $border-color;
 $border-radius-style: 10px;
 
-.border {
+@mixin border {
 	border: $border-style;
 	border-radius: $border-radius-style;
 }

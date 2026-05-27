@@ -1,19 +1,14 @@
-use crate::components::text::{Heading, SmallText};
+use crate::components::text::{Heading, Heading2};
 use yew::{component, html, Html, Properties};
 
-#[derive(PartialEq, Properties)]
-pub(super) struct SkillsProps {}
-
 #[component]
-pub(super) fn Skills(props: &SkillsProps) -> Html {
+pub(super) fn Skills() -> Html {
     html! {
-        <div>
+        <div >
             <Heading txt="Skills"/>
-            <div>
-                <Skill name="Rust" img_src="rust-logo.svg"/>
-            </div>
-            <div>
-                <Skill name="Java" img_src="rust-logo.svg"/>
+            <div class="skills-content">
+                <Skill name="Rust" img_src="assets/img/rust-logo.svg"/>
+                <Skill name="Java" img_src="assets/img/java.svg"/>
             </div>
         </div>
     }
@@ -28,8 +23,9 @@ pub(super) struct SkillProps {
 #[component]
 fn Skill(props: &SkillProps) -> Html {
     html! {
-        <div>
-            <SmallText txt={props.name}/>
+        <div class="skill">
+            <img width={100} src={props.img_src}/>
+            <Heading2 txt={props.name}/>
         </div>
     }
 }

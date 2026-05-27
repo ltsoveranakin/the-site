@@ -8,7 +8,7 @@ pub(crate) fn Header() -> Html {
         <div class="header-container">
             <div class="header">
                 <div class="header-top">
-                    <Title txt="Hi, I'm Takoda"/>
+                    <Title txt="Demo Site"/>
                     <div class="header-end">
                         <Github/>
                     </div>

@@ -1,6 +1,6 @@
-@use "../colors" as *;
 @use "shared";
 @use "../border";
+@use "../colors" as *;
 
 .header-container {
 	display: flex;
