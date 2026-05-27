@@ -1,0 +1,29 @@
+@use "../colors" as *;
+@use "shared";
+@use "../border";
+
+.header-container {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.header {
+	@include shared.hf;
+	@include border.border-rl;
+	@include border.border-b;
+	background-color: $header-col;
+	border-radius: 0 0 border.$border-radius-style border.$border-radius-style;
+}
+
+.header-top {
+	width: 100%;
+	display: inline-flex;
+	justify-content: center;
+}
+
+.header-end {
+	right: 0;
+	position: absolute;
+	width: fit-content;
+}

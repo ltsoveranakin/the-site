@@ -8,7 +8,7 @@ pub(super) struct DisclaimerProps {}
 pub(super) fn Disclaimer(props: &DisclaimerProps) -> Html {
     html! {
         <SmallText txt=
-        {"The rust logo is a registered trademark of the rust foundation"}
+        "The rust logo is a registered trademark of the rust foundation"
         />
     }
 }

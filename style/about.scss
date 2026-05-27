@@ -1,0 +1,17 @@
+@use "colors" as *;
+
+.about {
+	background-color: $base-col;
+}
+
+.about-heading {
+	width: 33%;
+}
+
+.about-heading-content {
+	flex: 1;
+}
+
+.about-paragraph {
+	width: 35%;
+}

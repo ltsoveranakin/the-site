@@ -14,3 +14,7 @@
 .text-small {
 	font-size: 0.7rem;
 }
+
+.text-paragraph {
+	@extend .text-normal;
+}

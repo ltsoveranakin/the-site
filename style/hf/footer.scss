@@ -1,0 +1,15 @@
+@use "../colors" as *;
+
+.footer {
+	width: 100%;
+	background-color: $footer-color;
+}
+
+.findme {
+	display: inline-flex;
+	height: fit-content;
+}
+
+.findme-paragraph {
+	align-self: center;
+}

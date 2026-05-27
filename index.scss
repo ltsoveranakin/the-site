@@ -35,19 +35,3 @@ main {
 a {
 	text-decoration: none;
 }
-
-
-$border-style: 5px solid $border-color;
-
-.border {
-	border: $border-style;
-	border-radius: 10px;
-}
-
-.border-t {
-	border-top: $border-style;
-}
-
-.border-b {
-	border-bottom: $border-style;
-}

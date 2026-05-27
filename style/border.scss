@@ -1,0 +1,22 @@
+@use "colors";
+
+$border-style: 5px solid colors.$border-color;
+$border-radius-style: 10px;
+
+.border {
+	border: $border-style;
+	border-radius: $border-radius-style;
+}
+
+.border-t {
+	border-top: $border-style;
+}
+
+@mixin border-b {
+	border-bottom: $border-style;
+}
+
+@mixin border-rl {
+	border-left: $border-style;
+	border-right: $border-style;
+}

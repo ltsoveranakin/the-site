@@ -3,6 +3,8 @@ use crate::projects::technologies::Technolgies;
 use web_sys::MouseEvent;
 use yew::{component, html, Callback, Html, Properties};
 
+const IMAGE_SIZE: f32 = 25.0;
+
 #[derive(Properties, PartialEq)]
 pub(super) struct ItemProps {
     pub(super) cover_img: &'static str,
@@ -15,17 +17,24 @@ pub(super) struct ItemProps {
 
 #[component]
 pub(super) fn DisplayItem(props: &ItemProps) -> Html {
+    let techs_used = props.tech_used.get_img_sources();
+
     html! {
         <a href={props.url} onmouseover={props.on_hover.clone()}>
-            <div class={"display-item border"}>
-                <img src={props.cover_img} class={"display-item-img"}/>
+            <div class="display-item border">
+                <img src={props.cover_img} class="display-item-img"/>
 
-                <div class={"display-item-title-container"}>
+                <div class="display-item-title-container">
 
                     {
-                        props.tech_used.get_img_src().iter().map(|img_src| {
+                        techs_used.iter().enumerate().map(|(i, (img_src, margin))| {
                             html! {
-                                <img class={"display-item-title-language-icon"} src={format!("assets/img/{}", img_src)}/>
+                                <>
+                                    <img width={25} src={format!("assets/img/{}", img_src)} style={format!("margin:{}px;", margin)}/>
+                                    if i < techs_used.len() - 1 {
+                                        <img width={15} src="assets/img/plus_icon.svg"/>
+                                    }
+                                </>
                             }
                         }).collect::<Html>()
                     }

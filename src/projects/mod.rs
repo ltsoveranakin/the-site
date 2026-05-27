@@ -59,13 +59,13 @@ fn Projects(props: &ProjectsProps) -> Html {
         .unwrap_or_default();
 
     html! {
-        <div class={"projects border-t"} style={projects_div_style}>
-            <div class={"projects-header border-b"}>
-                <Heading txt={"Projects"}/>
-                <Description txt={"These are some of the various personal projects I've worked on"}/>
+        <div class="projects" style={projects_div_style}>
+            <div class="projects-header">
+                <Heading txt="Projects"/>
+                <Description txt="These are some of the various personal projects I've worked on"/>
             </div>
 
-            <div class={"projects-container"}>
+            <div class="projects-container">
                 {
                     props.projects.iter().map(|project| {
                         let background_img_src = background_img_src.clone();

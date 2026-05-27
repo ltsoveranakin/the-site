@@ -1,18 +1,21 @@
 use crate::components::github::Github;
-use crate::components::text::Title;
+use crate::components::text::{Heading, Title};
 use yew::{component, html, Html, Properties};
 
-#[derive(PartialEq, Properties)]
-pub(super) struct HeaderProps {}
-
 #[component]
-pub(super) fn Header(props: &HeaderProps) -> Html {
+pub(super) fn Header() -> Html {
     html! {
-        <div class={"header"}>
-            <Title txt={"DEMO"}/>
-            <div class={"header-end"}>
-                <Github/>
+        <div class="header-container">
+        <div class="header">
+            <div class="header-top">
+                <Title txt="Hi, I'm Takoda"/>
+                <div class="header-end">
+                    <Github/>
+                </div>
             </div>
+
+            <Heading txt="Developer - Creator - Rust Enthusiast"/>
+        </div>
         </div>
     }
 }

@@ -17,7 +17,7 @@ impl Default for Technolgies {
 }
 
 impl Technolgies {
-    pub(super) fn get_img_src(&self) -> SmallVec<[&'static str; 16]> {
+    pub(super) fn get_img_sources(&self) -> SmallVec<[(&'static str, u32); 16]> {
         let s = *self;
 
         if s == Self::NONE {
@@ -27,11 +27,11 @@ impl Technolgies {
         let mut v = SmallVec::new();
 
         if s.intersects(Self::RUST) {
-            v.push("rust-logo-white-outline.svg");
+            v.push(("rust-logo-white-outline.svg", 5));
         }
 
         if s.intersects(Self::YEW) {
-            v.push("yew-logo.svg");
+            v.push(("yew-logo.svg", 0));
         }
 
         v
