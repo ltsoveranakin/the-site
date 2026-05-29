@@ -1,4 +1,4 @@
-use crate::components::text::{Heading, Paragraph};
+use crate::the_site::components::text::{Heading, Paragraph};
 use yew::{component, html, Html};
 
 #[component]

@@ -1,9 +1,9 @@
 mod item;
 mod technologies;
 
-use crate::components::text::{Description, Heading};
-use crate::projects::item::DisplayItem;
-use crate::projects::technologies::Technolgies;
+use crate::the_site::components::text::{Description, Heading};
+use crate::the_site::projects::item::DisplayItem;
+use crate::the_site::projects::technologies::Technolgies;
 use std::rc::Rc;
 use yew::{component, html, use_state, Callback, Html, Properties};
 

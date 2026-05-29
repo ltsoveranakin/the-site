@@ -1,4 +1,4 @@
-use crate::app::GITHUB_LINK;
+use crate::the_site::GITHUB_LINK;
 use yew::{component, html, Html};
 
 #[component]

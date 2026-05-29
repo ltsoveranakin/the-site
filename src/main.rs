@@ -1,11 +1,6 @@
-mod about_me;
-mod app;
-mod components;
-mod hf;
-mod projects;
-mod skills;
+mod the_site;
 
-use app::App;
+use crate::the_site::App;
 use tracing_subscriber::{filter::Targets, prelude::*};
 use tracing_web::MakeWebConsoleWriter;
 

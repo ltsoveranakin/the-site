@@ -1,5 +1,5 @@
-use crate::components::text::{Description, Heading};
-use crate::projects::technologies::Technolgies;
+use crate::the_site::components::text::{Description, Heading};
+use crate::the_site::projects::technologies::Technolgies;
 use web_sys::MouseEvent;
 use yew::{component, html, Callback, Html, Properties};
 

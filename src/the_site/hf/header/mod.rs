@@ -1,5 +1,5 @@
-use crate::components::github::Github;
-use crate::components::text::{Heading, Title};
+use crate::the_site::components::github::Github;
+use crate::the_site::components::text::{Heading, Title};
 use yew::{component, html, Html, Properties};
 
 #[component]

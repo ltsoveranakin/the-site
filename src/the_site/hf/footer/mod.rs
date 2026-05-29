@@ -1,6 +1,6 @@
 mod disclaimer;
 
-use crate::hf::footer::disclaimer::Disclaimer;
+use crate::the_site::hf::footer::disclaimer::Disclaimer;
 use yew::{component, html, Html};
 
 #[component]

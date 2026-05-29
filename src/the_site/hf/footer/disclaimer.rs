@@ -1,4 +1,4 @@
-use crate::components::text::SmallText;
+use crate::the_site::components::text::SmallText;
 use yew::{component, html, Html, Properties};
 
 #[derive(PartialEq, Properties)]

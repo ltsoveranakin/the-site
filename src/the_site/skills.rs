@@ -1,4 +1,4 @@
-use crate::components::text::{Heading, Heading2};
+use crate::the_site::components::text::{Heading, Heading2};
 use yew::{component, html, Html, Properties};
 
 #[component]
