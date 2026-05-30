@@ -1,0 +1,17 @@
+@use "terminal.scss";
+
+@font-face {
+    font-family: "brico";
+    src: url("../src/assets/font/JetBrainsMono-2.304/fonts/ttf/JetBrainsMono-Regular.ttf");
+}
+
+* {
+    font-family: "brico";
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
