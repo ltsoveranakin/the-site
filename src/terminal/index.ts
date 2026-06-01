@@ -1,4 +1,4 @@
-import { html } from "./util";
+import { html } from "../util";
 
 export const terminalElement = document.getElementById("terminal")!;
 const terminalContainer = document.getElementById("terminal-container")!;
