@@ -1,65 +1,35 @@
-import { html } from "../util";
+import {
+    getCurrentCommand,
+    handleCommand,
+    pushLine,
+    setCurrentCommand,
+    updateTerminal,
+} from "./command";
+import { terminalContainer } from "./element";
 
-export const terminalElement = document.getElementById("terminal")!;
-const terminalContainer = document.getElementById("terminal-container")!;
-
-let currentCommand = "";
 let cursorPosFromEnd = 0;
-
-function terminalText(text: string) {
-    return `takoda@website~$ ${text}`;
-}
-
-function createLine() {
-    let lineElement = html({
-        tag: "div",
-        className: "line",
-        innerText: terminalText(""),
-    });
-
-    return lineElement;
-}
-
-function pushLine() {
-    updateTerminal(currentCommand);
-    currentCommand = "";
-    terminalElement.appendChild(createLine());
-}
-
-function updateTerminal(withStr?: string) {
-    let terminalChildren = terminalElement.children;
-    let promptElement = terminalChildren[terminalChildren.length - 1] as
-        | HTMLDivElement
-        | undefined;
-
-    if (!promptElement) {
-        return;
-    }
-
-    promptElement.innerText = terminalText(withStr ?? currentCommand);
-}
 
 terminalContainer.addEventListener("keydown", (e) => {
     if (e.key.length == 1) {
-        currentCommand += e.key.toLowerCase();
+        setCurrentCommand(getCurrentCommand() + e.key.toLowerCase());
 
         updateTerminal();
     } else if (e.key == "Backspace") {
-        currentCommand = currentCommand.slice(0, -1);
+        setCurrentCommand(getCurrentCommand().slice(0, -1));
 
         updateTerminal();
     } else if (e.key == "Enter") {
-        pushLine();
+        handleCommand();
     }
 });
 
 let cursorLit = true;
 
 setInterval(() => {
-    let command = currentCommand;
+    let command = getCurrentCommand();
 
     if (cursorLit) {
-        let cursorIndex = currentCommand.length - cursorPosFromEnd;
+        let cursorIndex = command.length - cursorPosFromEnd;
 
         command =
             command.slice(0, cursorIndex) +

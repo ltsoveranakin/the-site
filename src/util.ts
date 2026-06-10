@@ -12,17 +12,17 @@ export function html(elementTy: ElementTy) {
     let curElTy: ElementTy | undefined = elementTy;
 
     while (curElTy) {
-        let element = document.createElement(elementTy.tag);
-        element.className = elementTy.className;
+        let element = document.createElement(curElTy.tag);
+        element.className = curElTy.className;
 
-        if (elementTy.innerText) {
-            element.innerText = elementTy.innerText;
+        if (curElTy.innerText) {
+            element.innerText = curElTy.innerText;
         }
 
         curParent.append(element);
 
         curParent = element;
-        curElTy = elementTy.child;
+        curElTy = curElTy.child;
     }
 
     return frag;
