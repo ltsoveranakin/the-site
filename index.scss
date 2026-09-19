@@ -1,37 +1,24 @@
-@use "style/index";
-@use "style/colors" as *;
+@use "src/assets/style/colors.module";
 
 @font-face {
-	font-family: Brico;
-	src: url("assets/font/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf");
+	font-family: "JetBrains Mono";
+	src: url("/src/assets/font/JetBrainsMono-2.304/fonts/ttf/JetBrainsMono-Regular.ttf");
 }
 
 * {
-	font-family: Brico;
+	font-family: "JetBrains Mono", serif;
+	color: colors.$dark;
 }
 
 html,
 body {
+	width: 100%;
 	height: 100%;
 	margin: 0;
 }
 
-body {
-	text-align: center;
-	align-items: center;
-	display: flex;
-	background: $body-bg-color;
+#app {
 	width: 100%;
 	height: 100%;
-	color: $text-color;
-	font-family: sans-serif;
-}
-
-main {
-	width: 100%;
-	height: 100%;
-}
-
-a {
-	text-decoration: none;
+	background-color: colors.$background;
 }

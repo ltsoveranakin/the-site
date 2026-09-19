@@ -1,0 +1,8 @@
+@use "./assets/style/layout.module";
+
+.main {
+	display: flex;
+	flex-direction: column;
+	padding: layout.$spacing;
+	gap: layout.$spacing;
+}
