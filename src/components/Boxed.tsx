@@ -2,7 +2,7 @@ import * as React from "react";
 import "./Boxed.scss";
 
 type BoxedProps = {
-	children?: React.JSX.Element;
+	children?: React.ReactNode;
 };
 
 export function BlackBoxed(props: BoxedProps) {
