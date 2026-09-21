@@ -1,0 +1,35 @@
+@use "../assets/style/colors.module";
+@use "../assets/style/font.module";
+
+.header {
+	display: flex;
+	flex-direction: row;
+	background-color: colors.$dark;
+	//height: fit-content;
+	//justify-content: center;
+	//place-items: center;
+}
+
+.title {
+	@include font.inter-font;
+	color: colors.$neon-green;
+	font-size: 3rem;
+	margin: 0;
+	text-align: center;
+}
+
+.spacer {
+
+}
+
+.titleContainer {
+	width: 100%;
+}
+
+.imageRow {
+	justify-self: end;
+}
+
+.cornerTri {
+	display: block;
+}

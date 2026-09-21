@@ -1,13 +1,12 @@
 import Header from "./components/Header.tsx";
 import "./App.scss";
-import PageBody from "./components/body/PageBody.tsx";
+import AboutPage from "./components/AboutPage.tsx";
 
 export default function App() {
 	return (
-		<div className={"main"}>
+		<>
 			<Header />
-
-			<PageBody />
-		</div>
+			<AboutPage />
+		</>
 	);
 }

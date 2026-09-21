@@ -1,8 +1,22 @@
 @use "./assets/style/layout.module";
+@use "./assets/style/colors.module";
 
 .main {
 	display: flex;
 	flex-direction: column;
 	padding: layout.$spacing;
 	gap: layout.$spacing;
+}
+
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+#app {
+	width: 100%;
+	height: 100%;
 }

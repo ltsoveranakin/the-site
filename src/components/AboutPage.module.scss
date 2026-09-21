@@ -1,0 +1,27 @@
+@use "../assets/style/colors.module";
+@use "../assets/style/font.module";
+
+.aboutContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+
+.aboutSideHeader {
+	width: 50px;
+	//height: 100%;
+	background-color: colors.$pink;
+}
+
+.aboutText {
+	@include font.nunito-sans-font;
+	display: block;
+	color: colors.$light;
+	font-size: 2rem;
+	transform: rotate(90deg);
+	white-space: nowrap;
+}
+
+.mainAbout {
+	height: 500px;
+}

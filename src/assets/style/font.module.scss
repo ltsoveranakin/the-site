@@ -1,0 +1,26 @@
+@font-face {
+	font-family: "Inter";
+	src: url("/src/assets/font/Inter/Inter-VariableFont_opsz,wght.ttf");
+}
+
+@mixin inter-font {
+	font-family: "Inter", serif;
+}
+
+@font-face {
+	font-family: "KHInterference";
+	src: url("/src/assets/font/KHInterferenceSite-Regular-2.woff2");
+}
+
+@mixin kh-interference-font {
+	font-family: "KHInterference", serif;
+}
+
+@font-face {
+	font-family: "NunitoSans";
+	src: url("/src/assets/font/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf");
+}
+
+@mixin nunito-sans-font {
+	font-family: "NunitoSans", serif;
+}
