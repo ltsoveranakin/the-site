@@ -23,7 +23,12 @@
 }
 
 .titleContainer {
+	display: flex;
 	width: 100%;
+	height: max-content;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
 .imageRow {

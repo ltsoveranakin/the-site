@@ -9,6 +9,7 @@
 
 .aboutSideHeader {
 	width: 50px;
+	padding-top: 25px;
 	//height: 100%;
 	background-color: colors.$pink;
 }
@@ -17,7 +18,7 @@
 	@include font.nunito-sans-font;
 	display: block;
 	color: colors.$light;
-	font-size: 2rem;
+	font-size: 2.3rem;
 	transform: rotate(90deg);
 	white-space: nowrap;
 }

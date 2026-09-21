@@ -1,7 +1,8 @@
 import styles from "./Header.module.scss";
 import corner_tri from "../assets/img/corner_tri.svg";
+import ConsoleCursor from "./ConsoleCursor.tsx";
 
-const IMAGE_SIZE = 200;
+const IMAGE_SIZE = 100;
 
 export default function Header() {
 	return (
@@ -17,6 +18,7 @@ export default function Header() {
 				<h1 className={styles.title}>
 					Takoda_Paschel // Programmer // Game_Dev
 				</h1>
+				<ConsoleCursor color={"#c0fe04"} rem={3} />
 			</div>
 
 			<div
