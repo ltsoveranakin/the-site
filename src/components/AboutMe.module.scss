@@ -1,0 +1,43 @@
+@use "../assets/style/colors.module";
+@use "../assets/style/font.module";
+
+@mixin traxus-text {
+	@include font.modenine-font;
+	color: colors.$orange;
+	text-wrap: nowrap;
+	margin: 0;
+}
+
+.aboutContainer {
+	background-color: colors.$traxus-dark;
+}
+
+.aboutBody {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	width: min-content;
+}
+
+.aboutHeader {
+	width: fit-content;
+	padding: 5px;
+	background-color: colors.$traxus-darker;
+}
+
+.aboutHeading {
+	@include traxus-text;
+	font-size: 2.5rem;
+}
+
+.aboutContent {
+	grid-column: 2;
+	grid-row: 2;
+	display: flex;
+	flex-direction: column;
+}
+
+.aboutText {
+	@include traxus-text;
+	font-size: 1.8rem;
+}

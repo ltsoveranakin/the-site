@@ -8,12 +8,12 @@
 }
 
 @font-face {
-	font-family: "KHInterference";
-	src: url("/src/assets/font/KHInterferenceSite-Regular-2.woff2");
+	font-family: "Modenine";
+	src: url("/src/assets/font/modenine/MODENINE.TTF");
 }
 
-@mixin kh-interference-font {
-	font-family: "KHInterference", serif;
+@mixin modenine-font {
+	font-family: "Modenine", serif;
 }
 
 @font-face {

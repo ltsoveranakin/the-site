@@ -14,6 +14,7 @@
 	display: flex;
 	width: 100%;
 	justify-content: center;
+	margin: 10px;
 }
 
 .titleBox {
@@ -46,7 +47,7 @@
 }
 
 .title {
-	@include font.inter-font;
+	@include font.modenine-font;
 	color: colors.$neon-green;
 	font-size: 3rem;
 	margin: 0;
@@ -59,4 +60,5 @@
 
 .cornerTri {
 	display: block;
+	align-self: end;
 }
