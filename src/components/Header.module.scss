@@ -10,16 +10,28 @@
 	//place-items: center;
 }
 
-.title {
-	@include font.inter-font;
-	color: colors.$neon-green;
-	font-size: 3rem;
-	margin: 0;
-	text-align: center;
+.titleBoxContainer {
+	display: flex;
+	width: 100%;
+	justify-content: center;
 }
 
-.spacer {
+.titleBox {
+	display: flex;
+}
 
+.plusColumn {
+	display: flex;
+	flex-direction: column;
+}
+
+.plusRowSpacer {
+	height: 100%;
+}
+
+.titleSpacerContainer {
+	display: flex;
+	flex-direction: column;
 }
 
 .titleContainer {
@@ -29,6 +41,16 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	align-self: center;
+	margin: 20px;
+}
+
+.title {
+	@include font.inter-font;
+	color: colors.$neon-green;
+	font-size: 3rem;
+	margin: 0;
+	text-align: center;
 }
 
 .imageRow {
