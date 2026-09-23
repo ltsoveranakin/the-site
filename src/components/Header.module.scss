@@ -1,10 +1,10 @@
-@use "../assets/style/colors.module";
+@use "../assets/style/colors.module" as *;
 @use "../assets/style/font.module";
 
 .header {
 	display: flex;
 	flex-direction: row;
-	background-color: colors.$dark;
+	background-color: $dark;
 	//height: fit-content;
 	//justify-content: center;
 	//place-items: center;
@@ -48,7 +48,7 @@
 
 .title {
 	@include font.modenine-font;
-	color: colors.$neon-green;
+	color: $cyac-green;
 	font-size: 3rem;
 	margin: 0;
 	text-align: center;

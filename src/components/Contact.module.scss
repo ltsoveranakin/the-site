@@ -1,4 +1,4 @@
-@use "../assets/style/colors.module";
+@use "../assets/style/colors.module" as *;
 @use "../assets/style/font.module";
 
 .aboutContainer {
@@ -11,13 +11,13 @@
 	width: 50px;
 	padding-top: 25px;
 	//height: 100%;
-	background-color: colors.$pink;
+	background-color: $nucal-pink;
 }
 
 .aboutText {
 	@include font.nunito-sans-font;
 	display: block;
-	color: colors.$light;
+	color: $light;
 	font-size: 2.3rem;
 	transform: rotate(90deg);
 	white-space: nowrap;

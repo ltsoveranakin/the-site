@@ -1,0 +1,16 @@
+@use "../../assets/style/colors.module" as *;
+@use "../../assets/style/font.module";
+
+.categoryDescriptorContainer {
+	border-radius: 10px;
+	width: fit-content;
+}
+
+.categoryDescriptor {
+	@include font.inter-font;
+	font-size: 1.5rem;
+	font-weight: bolder;
+	background-color: $mida-purple;
+	padding: 8px;
+	border-radius: 10px 10px 0 0;
+}

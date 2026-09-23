@@ -1,6 +1,6 @@
 import styles from "./Header.module.scss";
-import corner_tri from "../assets/img/corner_tri.svg";
-import plus_icon from "../assets/img/plus_icon.svg";
+import cornerTri from "../assets/img/corner_tri.svg";
+import plusIcon from "../assets/img/plus_icon.svg";
 import ConsoleCursor from "./ConsoleCursor.tsx";
 
 const IMAGE_SIZE = 100;
@@ -11,7 +11,7 @@ export default function Header() {
 	return (
 		<div className={styles.header}>
 			<img
-				src={corner_tri}
+				src={cornerTri}
 				alt={stylizedGraphicText}
 				width={IMAGE_SIZE}
 				className={styles.cornerTri}
@@ -47,13 +47,13 @@ function PlusColumn() {
 	return (
 		<div className={styles.plusColumn}>
 			<img
-				src={plus_icon}
+				src={plusIcon}
 				alt={stylizedGraphicText}
 				width={PLUS_ICON_SIZE}
 			/>
 			<div className={styles.plusRowSpacer} />
 			<img
-				src={plus_icon}
+				src={plusIcon}
 				alt={stylizedGraphicText}
 				width={PLUS_ICON_SIZE}
 			/>

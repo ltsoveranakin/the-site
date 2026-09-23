@@ -1,20 +1,19 @@
-@use "../assets/style/colors.module";
+@use "../assets/style/colors.module" as *;
 @use "../assets/style/font.module";
 
 @mixin traxus-text {
 	@include font.modenine-font;
-	color: colors.$orange;
+	color: $traxus-orange;
 	text-wrap: nowrap;
 	margin: 0;
 }
 
 .aboutContainer {
-	background-color: colors.$traxus-dark;
+	background-color: $traxus-dark;
 }
 
 .aboutBody {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
 	gap: 20px;
 	width: min-content;
 }
@@ -22,7 +21,7 @@
 .aboutHeader {
 	width: fit-content;
 	padding: 5px;
-	background-color: colors.$traxus-darker;
+	background-color: $traxus-darker;
 }
 
 .aboutHeading {
@@ -40,4 +39,5 @@
 .aboutText {
 	@include traxus-text;
 	font-size: 1.8rem;
+	text-align: center;
 }
