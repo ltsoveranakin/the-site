@@ -1,11 +1,12 @@
 import styles from "./Projects.module.scss";
-import ProjectCategoryList from "./ProjectCategoryList.tsx";
+import ProjectCategory from "./ProjectCategory.tsx";
 
 import { useState } from "react";
 import {
 	projectDataCategories,
 	type ProjectDataCategory,
 } from "./projectDataCategories.ts";
+import ProjectCategoryTabs from "./ProjectCategoryTabs.tsx";
 
 export default function Projects() {
 	const [category, setCategory] = useState<ProjectDataCategory>(
@@ -13,29 +14,9 @@ export default function Projects() {
 	);
 
 	return (
-		<div>
-			<div className={styles.projectsHeader}>
-				{projectDataCategories.map((projectCategory) => {
-					return (
-						<div
-							className={styles.projectCategoryTab}
-							key={projectCategory.name}
-							onClick={() => {
-								setCategory(projectCategory);
-							}}
-						>
-							<div className={styles.projectCategoryTabName}>
-								{projectCategory.name}
-							</div>
-
-							<div className={styles.projectCategoryTabCount}>
-								{projectCategory.projects.length}
-							</div>
-						</div>
-					);
-				})}
-			</div>
-			<ProjectCategoryList category={category} />
+		<div className={styles.projectsContainer}>
+			<ProjectCategoryTabs setCategory={setCategory} />
+			<ProjectCategory category={category} />
 		</div>
 	);
 }

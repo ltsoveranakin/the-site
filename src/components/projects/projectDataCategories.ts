@@ -1,5 +1,6 @@
-import type { ProjectData } from "./Project.tsx";
+import type { ProjectData } from "./ProjectCard.tsx";
 import rustLogo from "../../assets/img/3rdparty/rust_logo.svg";
+import typescriptLogo from "../../assets/img/3rdparty/ts_logo.svg";
 
 const rustProjects: ProjectDataCategory = {
 	name: "RUST",
@@ -15,7 +16,7 @@ const rustProjects: ProjectDataCategory = {
 
 const tsProjects: ProjectDataCategory = {
 	name: "TYPESCRIPT",
-	imageSrc: rustLogo,
+	imageSrc: typescriptLogo,
 	imageAlt: "Typescript Logo",
 	projects: [
 		{

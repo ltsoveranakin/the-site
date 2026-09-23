@@ -3,4 +3,4 @@ export type ProjectData = {
 	repoName?: string;
 };
 
-export default function Project() {}
+export default function ProjectCard() {}

@@ -1,0 +1,29 @@
+@use "index";
+@use "colors" as *;
+
+
+.projectsHeader {
+	display: flex;
+	justify-content: end;
+	//align-items: end;
+}
+
+.projectCategoryTab {
+	@include index.projects-font;
+	display: flex;
+	flex-direction: row;
+	margin-inline-start: 30px;
+	cursor: pointer;
+}
+
+.projectCategoryTabName {
+	background-color: $tab-primary;
+	border-radius: index.$category-border-radius 0 0 index.$category-border-radius;
+	padding: index.$category-border-radius;
+}
+
+.projectCategoryTabCount {
+	background-color: $tab-secondary;
+	border-radius: 0 index.$category-border-radius index.$category-border-radius 0;
+	padding: index.$category-border-radius;
+}
