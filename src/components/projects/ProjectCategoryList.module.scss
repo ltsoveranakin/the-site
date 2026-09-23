@@ -1,5 +1,5 @@
 @use "../../assets/style/colors.module" as *;
-@use "../../assets/style/font.module";
+@use "./index";
 
 .categoryDescriptorContainer {
 	border-radius: 10px;
@@ -7,10 +7,11 @@
 }
 
 .categoryDescriptor {
-	@include font.inter-font;
+	@include index.projects-font;
 	font-size: 1.5rem;
 	font-weight: bolder;
 	background-color: $mida-purple;
 	padding: 8px;
 	border-radius: 10px 10px 0 0;
+	text-align: center;
 }

@@ -10,11 +10,7 @@ export default function AboutMe() {
 
 				<div className={styles.aboutContent}>
 					<h3 className={styles.aboutText}>
-						Hi, I'm Takoda.
-						<br />
-						I'm currently majoring in computer science,
-						<br />
-						with a concentration in machine learning.
+
 					</h3>
 				</div>
 			</div>

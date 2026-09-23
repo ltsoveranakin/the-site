@@ -1,4 +1,30 @@
+@use "../../assets/style/colors.module" as *;
+@use "./index";
+
+$category-tab-border-radius: 10px;
+
 .projectsHeader {
 	display: flex;
-	place-content: end;
+	justify-content: end;
+	//align-items: end;
+}
+
+.projectCategoryTab {
+	@include index.projects-font;
+	display: flex;
+	flex-direction: row;
+	margin-inline-start: 30px;
+	cursor: pointer;
+}
+
+.projectCategoryTabName {
+	background-color: $gray;
+	border-radius: $category-tab-border-radius 0 0 $category-tab-border-radius;
+	padding: $category-tab-border-radius;
+}
+
+.projectCategoryTabCount {
+	background-color: $mida-purple;
+	border-radius: 0 $category-tab-border-radius $category-tab-border-radius 0;
+	padding: $category-tab-border-radius;
 }

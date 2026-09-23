@@ -1,0 +1,5 @@
+@use "../../assets/style/font.module";
+
+@mixin projects-font {
+	@include font.inter-font;
+}
