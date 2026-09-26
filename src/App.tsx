@@ -3,6 +3,7 @@ import "./App.scss";
 import Contact from "./components/Contact.tsx";
 import Projects from "./components/projects/Projects.tsx";
 import AboutMe from "./components/AboutMe.tsx";
+import StaticOverlay from "./components/StaticOverlay.tsx";
 
 export default function App() {
 	return (
@@ -11,6 +12,7 @@ export default function App() {
 			<AboutMe />
 			<Projects />
 			<Contact />
+			<StaticOverlay />
 		</>
 	);
 }
