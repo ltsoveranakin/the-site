@@ -9,7 +9,8 @@ function mainRender(
 	glReady: GLReady,
 	time: DOMHighResTimeStamp,
 ) {
-	gl.uniform1f(glReady.uTimeLocation, time / 1000);
+	gl.uniform1f(glReady.uTimeLocation, time / 10000);
+	// gl.uniform1f(glReady.entropyLocation, Math.random() * 1000);
 
 	gl.clear(gl.COLOR_BUFFER_BIT);
 	gl.drawArrays(gl.TRIANGLES, 0, 6);
