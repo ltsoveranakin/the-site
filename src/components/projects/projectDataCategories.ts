@@ -1,29 +1,44 @@
-import type { ProjectData } from "./ProjectCard.tsx";
-import rustLogo from "../../assets/img/3rdparty/rust_logo.svg";
-import typescriptLogo from "../../assets/img/3rdparty/ts_logo.svg";
+import { Technology } from "./technology.ts";
 
 const rustProjects: ProjectDataCategory = {
-	name: "RUST",
-	imageSrc: rustLogo,
-	imageAlt: "Rust Logo",
+	name: Technology.RUST.name.toUpperCase(),
+	imageSrc: Technology.RUST.imageSrc,
+	imageAlt: Technology.RUST.alt(),
 	projects: [
 		{
-			projectName: "SerBytes",
+			name: "SerBytes",
+			description:
+				"A simple data serializer originally made so enums could be serialized in as little space as possible",
 			repoName: "serbytes",
+			technologies: [Technology.RUST],
 		},
 	],
 };
 
 const tsProjects: ProjectDataCategory = {
-	name: "TYPESCRIPT",
-	imageSrc: typescriptLogo,
-	imageAlt: "Typescript Logo",
+	name: Technology.TYPESCRIPT.name.toUpperCase(),
+	imageSrc: Technology.TYPESCRIPT.imageSrc,
+	imageAlt: Technology.TYPESCRIPT.alt(),
 	projects: [
 		{
-			projectName: "Personal Website",
+			name: "Personal Website",
+			description: "My own personal website",
 			repoName: "the-site",
+			technologies: [Technology.TYPESCRIPT],
 		},
 	],
+};
+
+export const projectDataCategories: ProjectDataCategory[] = [
+	rustProjects,
+	tsProjects,
+];
+
+export type ProjectData = {
+	name: string;
+	description: string;
+	technologies: Technology[];
+	repoName?: string;
 };
 
 export type ProjectDataCategory = {
@@ -32,8 +47,3 @@ export type ProjectDataCategory = {
 	imageAlt: string;
 	projects: ProjectData[];
 };
-
-export const projectDataCategories: ProjectDataCategory[] = [
-	rustProjects,
-	tsProjects,
-];

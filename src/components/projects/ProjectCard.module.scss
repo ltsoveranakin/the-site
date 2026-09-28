@@ -1,0 +1,36 @@
+@use "./index" as *;
+@use "./colors" as *;
+
+.projectCardHeader {
+	@include rounded-top;
+	background-color: $tab-highlight;
+	padding: 10px;
+}
+
+.projectCardHeaderText {
+	@include projects-font;
+	font-size: 1.5rem;
+}
+
+.projectCardContent {
+	@include rounded-bottom;
+	display: flex;
+	width: 300px;
+	padding: 10px;
+	background-color: $tab-primary;
+}
+
+.technologiesUsed {
+	justify-self: end;
+	align-self: end;
+}
+
+.technologyContainer {
+	padding: 2px;
+	border: 2px solid $tab-secondary;
+	height: fit-content;
+}
+
+.technologyImg {
+	display: block;
+}

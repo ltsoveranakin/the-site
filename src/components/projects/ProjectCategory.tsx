@@ -1,5 +1,6 @@
 import styles from "./ProjectCategory.module.scss";
 import type { ProjectDataCategory } from "./projectDataCategories.ts";
+import ProjectCard from "./ProjectCard.tsx";
 
 type ProjectCategoryListProps = {
 	category: ProjectDataCategory;
@@ -7,7 +8,7 @@ type ProjectCategoryListProps = {
 
 export default function ProjectCategory(props: ProjectCategoryListProps) {
 	return (
-		<div>
+		<div className={styles.projectCategory}>
 			<div className={styles.categoryDescriptorContainer}>
 				<div className={styles.categoryDescriptor}>
 					_{props.category.name}
@@ -19,6 +20,12 @@ export default function ProjectCategory(props: ProjectCategoryListProps) {
 						width={180}
 					/>
 				</div>
+			</div>
+
+			<div>
+				{props.category.projects.map((project) => {
+					return <ProjectCard project={project} key={project.name} />;
+				})}
 			</div>
 		</div>
 	);

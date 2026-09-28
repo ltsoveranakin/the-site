@@ -1,6 +1,10 @@
 @use "./colors" as *;
 @use "./index" as *;
 
+.projectCategory {
+	display: flex;
+	flex-direction: row;
+}
 
 .categoryDescriptorContainer {
 	border-radius: 10px;
@@ -10,20 +14,20 @@
 
 .categoryDescriptor {
 	@include projects-font;
+	@include rounded-top;
 	font-size: 1.5rem;
 	font-weight: bolder;
-	background-color: $tab-secondary;
+	background-color: $tab-highlight;
 	padding: 8px;
-	border-radius: $category-border-radius $category-border-radius 0 0;
 	text-align: center;
 }
 
 .categoryDescriptorImageContainer {
+	@include rounded-bottom;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: $tab-primary;
-	border-radius: 0 0 $category-border-radius $category-border-radius;
 }
 
 .categoryImage {

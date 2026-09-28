@@ -1,7 +1,15 @@
 @use "../../assets/style/font.module";
 
+$category-border-radius: 10px;
+
 @mixin projects-font {
 	@include font.inter-font;
 }
 
-$category-border-radius: 10px;
+@mixin rounded-top {
+	border-radius: $category-border-radius $category-border-radius 0 0;
+}
+
+@mixin rounded-bottom {
+	border-radius: 0 0 $category-border-radius $category-border-radius;
+}
