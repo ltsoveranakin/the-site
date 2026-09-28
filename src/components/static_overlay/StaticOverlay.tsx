@@ -2,6 +2,7 @@ import { createRef, useEffect } from "react";
 import styles from "./StaticOverlay.module.scss";
 import vertSource from "./overlay.vert?raw";
 import fragSource from "./overlay.frag?raw";
+import { isStaticDisabled } from "./util.ts";
 
 function mainRender(
 	gl: WebGLRenderingContext,
@@ -73,10 +74,8 @@ function setupGLContext(gl: WebGLRenderingContext): GLReady {
 	};
 }
 
-const staticEnabledKey = "static_enabled";
-
 export default function StaticOverlay() {
-	if (localStorage.getItem(staticEnabledKey) != "1") {
+	if (isStaticDisabled()) {
 		return <></>;
 	}
 

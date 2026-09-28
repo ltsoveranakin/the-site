@@ -68,7 +68,8 @@ float snoise(vec2 v)
 
 void main () {
     //    float frame = floor(uTime * 30.0);
-    float n = snoise(gl_FragCoord.xy + uTime) - 0.5;
+    float hashed = hash(gl_FragCoord.xy + uTime);
+    float n = snoise(gl_FragCoord.xy + hashed) - 0.5;
 
     gl_FragColor = vec4(n, n, n, 0.01);
 }
