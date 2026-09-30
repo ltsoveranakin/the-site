@@ -12,6 +12,13 @@ const rustProjects: ProjectDataCategory = {
 			repoName: "serbytes",
 			technologies: [Technology.RUST],
 		},
+		{
+			name: "Napoleon Amp",
+			description:
+				"A minimal music client to manage, play, and store mp3 files",
+			repoName: "napoleon_amp",
+			technologies: [Technology.RUST],
+		},
 	],
 };
 
@@ -24,7 +31,7 @@ const tsProjects: ProjectDataCategory = {
 			name: "Personal Website",
 			description: "My own personal website",
 			repoName: "the-site",
-			technologies: [Technology.TYPESCRIPT],
+			technologies: [Technology.TYPESCRIPT, Technology.REACT],
 		},
 	],
 };

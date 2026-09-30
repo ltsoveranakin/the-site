@@ -76,11 +76,13 @@ void main () {
 	//	float hashed = hash(vec2(barIndex * 3.0, gl_FragCoord.y) + uTime);
 	//	float n = hashed;
 	float hashed = hash(gl_FragCoord.xy + uTime);
-	float n = snoise(gl_FragCoord.xy + hashed + uTime);
+	float n = snoise(gl_FragCoord.xy + hashed + uTime) * (0.8 / 1.0);
 
 	if (n > 0.15) {
 		discard;
 	}
+
+	// n <= 0.15
 
 	//	if (abs(n - 0.75) > 0.01) {
 	//		discard;

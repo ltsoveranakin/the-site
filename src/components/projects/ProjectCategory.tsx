@@ -22,7 +22,7 @@ export default function ProjectCategory(props: ProjectCategoryListProps) {
 				</div>
 			</div>
 
-			<div>
+			<div className={styles.projectCards}>
 				{props.category.projects.map((project) => {
 					return <ProjectCard project={project} key={project.name} />;
 				})}

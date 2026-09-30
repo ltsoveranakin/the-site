@@ -1,6 +1,10 @@
 @use "./index" as *;
 @use "./colors" as *;
 
+.projectCard {
+	margin: 40px;
+}
+
 .projectCardHeader {
 	@include rounded-top;
 	background-color: $tab-highlight;
@@ -15,12 +19,15 @@
 .projectCardContent {
 	@include rounded-bottom;
 	display: flex;
+	flex-direction: column;
 	width: 300px;
 	padding: 10px;
 	background-color: $tab-primary;
 }
 
 .technologiesUsed {
+	display: flex;
+	flex-direction: row;
 	justify-self: end;
 	align-self: end;
 }
@@ -33,4 +40,9 @@
 
 .technologyImg {
 	display: block;
+}
+
+.viewOnGithub {
+	display: flex;
+	align-items: center;
 }

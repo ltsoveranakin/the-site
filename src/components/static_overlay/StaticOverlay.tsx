@@ -4,6 +4,8 @@ import vertSource from "./overlay.vert?raw";
 import fragSource from "./overlay.frag?raw";
 import { isStaticDisabled } from "./util.ts";
 
+const resolutionDivisor = 3;
+
 function mainRender(
 	gl: WebGLRenderingContext,
 	glReady: GLReady,
@@ -21,7 +23,10 @@ function createShader(
 	shaderType: GLenum,
 	shaderSource: string,
 ) {
-	console.log("compiling shader", shaderType);
+	console.log(
+		"compiling shader",
+		shaderType == gl.FRAGMENT_SHADER ? "FRAG" : "VERT",
+	);
 	const shader = gl.createShader(shaderType)!;
 
 	gl.shaderSource(shader, shaderSource);
@@ -94,8 +99,8 @@ export default function StaticOverlay() {
 		}
 
 		const onResize = () => {
-			canvas.width = innerWidth;
-			canvas.height = innerHeight;
+			canvas.width = innerWidth / resolutionDivisor;
+			canvas.height = innerHeight / resolutionDivisor;
 			gl.viewport(0, 0, innerWidth, innerHeight);
 		};
 

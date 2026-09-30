@@ -1,5 +1,6 @@
 import typescriptLogo from "../../assets/img/3rdparty/ts_logo.svg";
 import rustLogo from "../../assets/img/3rdparty/rust_logo.svg";
+import reactLogo from "../../assets/img/3rdparty/react_logo.svg";
 
 export class Technology {
 	static TYPESCRIPT = new Technology(
@@ -9,6 +10,8 @@ export class Technology {
 	);
 
 	static RUST = new Technology(rustLogo, "https://rust-lang.org/", "Rust");
+
+	static REACT = new Technology(reactLogo, "https://react.dev/", "React");
 
 	private constructor(
 		readonly imageSrc: string,
