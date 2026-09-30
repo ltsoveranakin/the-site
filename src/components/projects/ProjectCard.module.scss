@@ -1,4 +1,4 @@
-@use "./index" as *;
+@use "./index.module" as *;
 @use "./colors" as *;
 
 .projectCard {
@@ -12,7 +12,7 @@
 }
 
 .projectCardHeaderText {
-	@include projects-font;
+	@extend .projectsFont;
 	font-size: 1.5rem;
 }
 
@@ -23,6 +23,18 @@
 	width: 300px;
 	padding: 10px;
 	background-color: $tab-primary;
+}
+
+.attribContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.viewOnGithub {
+	display: flex;
+	align-items: center;
+	justify-self: end;
 }
 
 .technologiesUsed {
@@ -42,7 +54,3 @@
 	display: block;
 }
 
-.viewOnGithub {
-	display: flex;
-	align-items: center;
-}

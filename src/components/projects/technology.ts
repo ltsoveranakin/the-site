@@ -7,16 +7,18 @@ export class Technology {
 		typescriptLogo,
 		"https://www.typescriptlang.org/",
 		"TypeScript",
+		1,
 	);
 
-	static RUST = new Technology(rustLogo, "https://rust-lang.org/", "Rust");
+	static RUST = new Technology(rustLogo, "https://rust-lang.org/", "Rust", 1);
 
-	static REACT = new Technology(reactLogo, "https://react.dev/", "React");
+	static REACT = new Technology(reactLogo, "https://react.dev/", "React", 0);
 
 	private constructor(
 		readonly imageSrc: string,
 		readonly link: string,
 		readonly name: string,
+		readonly priority: number,
 	) {}
 
 	public alt() {

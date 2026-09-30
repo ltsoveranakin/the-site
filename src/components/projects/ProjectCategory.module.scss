@@ -1,5 +1,5 @@
 @use "./colors" as *;
-@use "./index" as *;
+@use "./index.module" as *;
 
 .projectCategory {
 	display: flex;
@@ -13,7 +13,7 @@
 }
 
 .categoryDescriptor {
-	@include projects-font;
+	@extend .projectsFont;
 	@include rounded-top;
 	font-size: 1.5rem;
 	font-weight: bolder;

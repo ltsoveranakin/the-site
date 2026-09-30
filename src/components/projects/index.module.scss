@@ -2,7 +2,7 @@
 
 $category-border-radius: 10px;
 
-@mixin projects-font {
+.projectsFont {
 	@include font.inter-font;
 }
 

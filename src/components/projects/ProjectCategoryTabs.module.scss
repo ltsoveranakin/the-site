@@ -1,4 +1,4 @@
-@use "index";
+@use "./index.module" as *;
 @use "colors" as *;
 
 
@@ -9,7 +9,7 @@
 }
 
 .projectCategoryTab {
-	@include index.projects-font;
+	@extend .projectsFont;
 	display: flex;
 	flex-direction: row;
 	margin-inline-start: 30px;
@@ -18,12 +18,12 @@
 
 .projectCategoryTabName {
 	background-color: $tab-primary;
-	border-radius: index.$category-border-radius 0 0 index.$category-border-radius;
-	padding: index.$category-border-radius;
+	border-radius: $category-border-radius 0 0 $category-border-radius;
+	padding: $category-border-radius;
 }
 
 .projectCategoryTabCount {
 	background-color: $tab-highlight;
-	border-radius: 0 index.$category-border-radius index.$category-border-radius 0;
-	padding: index.$category-border-radius;
+	border-radius: 0 $category-border-radius $category-border-radius 0;
+	padding: $category-border-radius;
 }

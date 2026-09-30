@@ -1,5 +1,6 @@
 import type { ProjectData } from "./projectDataCategories.ts";
 import styles from "./ProjectCard.module.scss";
+import projectStyles from "./index.module.scss";
 import githubLogo from "../../assets/img/3rdparty/github_logo.svg";
 
 type ProjectCardProps = {
@@ -16,56 +17,69 @@ export default function ProjectCard(props: ProjectCardProps) {
 			</div>
 
 			<div className={styles.projectCardContent}>
-				<span>{props.project.description}</span>
+				<span className={projectStyles.projectsFont}>
+					{props.project.description}
+				</span>
 
-				<a
-					href={`https://github.com/ltsoveranakin/${props.project.repoName}`}
-					className={styles.viewOnGithub}
-				>
-					<span>View it on GitHub</span>
-					<img src={githubLogo} alt={"GitHub Logo"} width={50} />
-				</a>
+				<div className={styles.attribContainer}>
+					<a
+						href={`https://github.com/ltsoveranakin/${props.project.repoName}`}
+						className={styles.viewOnGithub}
+					>
+						<span className={projectStyles.projectsFont}>
+							View on GitHub
+						</span>
+						<img src={githubLogo} alt={"GitHub Logo"} width={50} />
+					</a>
 
-				<div
-					className={styles.technologiesUsed}
-					title={"Technologies used in the making of this project"}
-				>
-					{props.project.technologies.map((technology, i) => {
-						let margLeft;
-						let margRight;
-
-						if (i == 0) {
-							margLeft = true;
-						} else {
-							if (i == props.project.technologies.length - 1) {
-								margLeft = true;
-							}
-							margRight = true;
+					<div
+						className={styles.technologiesUsed}
+						title={
+							"Technologies used in the making of this project"
 						}
+					>
+						{props.project.technologies.map((technology, i) => {
+							let margLeft;
+							let margRight;
 
-						const margSpace = "10px";
+							if (i == 0) {
+								margLeft = true;
+							} else {
+								if (
+									i ==
+									props.project.technologies.length - 1
+								) {
+									margLeft = true;
+								}
+								margRight = true;
+							}
 
-						return (
-							<a
-								href={technology.link}
-								style={{
-									marginLeft: margLeft ? margSpace : "0",
-									marginRight: margRight ? margSpace : "0",
-								}}
-								key={technology.name}
-							>
-								<div className={styles.technologyContainer}>
-									<img
-										src={technology.imageSrc}
-										className={styles.technologyImg}
-										width={30}
-										height={30}
-										alt={technology.alt()}
-									/>
-								</div>
-							</a>
-						);
-					})}
+							const margSpace = "10px";
+
+							return (
+								<a
+									href={technology.link}
+									style={{
+										marginLeft: margLeft ? margSpace : "0",
+										marginRight: margRight
+											? margSpace
+											: "0",
+									}}
+									key={technology.name}
+								>
+									<div className={styles.technologyContainer}>
+										<img
+											src={technology.imageSrc}
+											className={styles.technologyImg}
+											width={30}
+											height={30}
+											alt={technology.alt()}
+										/>
+									</div>
+								</a>
+							);
+						})}
+					</div>
 				</div>
 			</div>
 		</div>

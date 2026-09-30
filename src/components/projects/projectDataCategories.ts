@@ -36,11 +36,6 @@ const tsProjects: ProjectDataCategory = {
 	],
 };
 
-export const projectDataCategories: ProjectDataCategory[] = [
-	rustProjects,
-	tsProjects,
-];
-
 export type ProjectData = {
 	name: string;
 	description: string;
@@ -54,3 +49,16 @@ export type ProjectDataCategory = {
 	imageAlt: string;
 	projects: ProjectData[];
 };
+
+export const projectDataCategories: ProjectDataCategory[] = [
+	rustProjects,
+	tsProjects,
+];
+
+for (const projectCategory of projectDataCategories) {
+	for (const project of projectCategory.projects) {
+		project.technologies.sort((a, b) => {
+			return a.priority - b.priority;
+		});
+	}
+}
