@@ -4,7 +4,7 @@ import vertSource from "./overlay.vert?raw";
 import fragSource from "./overlay.frag?raw";
 import { isStaticDisabled } from "./util.ts";
 
-const resolutionDivisor = 3;
+const resolutionDivisor = 2;
 const minFrameInterval = 1000 / 30;
 
 let frameIntervalMs = 1000 / 60;
