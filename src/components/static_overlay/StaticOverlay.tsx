@@ -4,7 +4,16 @@ import vertSource from "./overlay.vert?raw";
 import fragSource from "./overlay.frag?raw";
 import { isStaticDisabled } from "./util.ts";
 
-const resolutionDivisor = 3;
+const resolutionDivisor = 2;
+const minFrameInterval = 1000 / 30;
+
+let frameIntervalMs = 1000 / 60;
+
+requestAnimationFrame((start) => {
+	requestAnimationFrame((end) => {
+		frameIntervalMs = end - start;
+	});
+});
 
 function mainRender(
 	gl: WebGLRenderingContext,
@@ -111,10 +120,20 @@ export default function StaticOverlay() {
 
 		let frameRequestId: number;
 
-		let renderFrame = (time: DOMHighResTimeStamp) => {
+		const renderFrame = (time: DOMHighResTimeStamp) => {
 			mainRender(gl, glReady, time);
 
-			frameRequestId = requestAnimationFrame(renderFrame);
+			const redraw = () => {
+				frameRequestId = requestAnimationFrame(renderFrame);
+			};
+
+			const timeoutTime = Math.max(minFrameInterval - frameIntervalMs, 0); // keep from ever having a negative case and crashing
+
+			if (timeoutTime <= 5) {
+				redraw();
+			} else {
+				setTimeout(redraw, timeoutTime);
+			}
 		};
 
 		frameRequestId = requestAnimationFrame(renderFrame);
